@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* PAGE */
+.announcements-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.announcements-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.85),
+      rgba(245,252,248,0.85)
+    ),
+    url("../../assets/announcements-bg.png") center / cover no-repeat;
+  z-index: 1;
+}
+
+/* CONTENT */
+.announcements-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 10%;
+}
+
+.announcements-content h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1e7f43;
+}
+
+.subtitle {
+  margin-top: 8px;
+  margin-bottom: 40px;
+  color: #555;
+  max-width: 520px;
+}
+
+/* LIST */
+.announcement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* CARD */
+.announcement-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.12),
+    0 6px 16px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.announcement-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 28px 60px rgba(0,0,0,0.18),
+    0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* CARD HEADER */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.category {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #1e7f43, #2ea56a);
+  color: white;
+}
+
+.date {
+  font-size: 13px;
+  color: #666;
+}
+
+/* CARD TEXT */
+.announcement-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.announcement-card p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .announcements-content {
+    padding: 40px 20px;
+  }
+
+  .announcements-content h1 {
+    font-size: 30px;
+  }
+}

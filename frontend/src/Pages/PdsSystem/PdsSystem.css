@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* PAGE */
+.pds-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.pds-bg {
+  position: absolute;
+  inset: 40px;
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.35),
+      rgba(245,252,248,0.95)
+    ),
+    url("../../assets/pds-system-bg.png") center / contain no-repeat;
+  border-radius: 30px;
+  z-index: 0;
+}
+
+/* PDS TOPBAR */
+.pds-topbar {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 8% 0;
+}
+
+.pds-topbar h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e7f43;
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #1e7f43;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.username {
+  font-weight: 600;
+  color: #333;
+}
+
+.account-menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  min-width: 140px;
+  z-index: 10;
+}
+
+.account-menu div {
+  padding: 12px 18px;
+  cursor: pointer;
+  color: #d9534f;
+  font-weight: 600;
+}
+
+.account-menu div:hover {
+  background: #fef0f0;
+}
+
+/* CONTENT */
+.pds-content {
+  position: relative;
+  z-index: 1;
+  padding: 70px 8%;
+}
+
+.pds-content h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1e7f43;
+}
+
+.subtitle {
+  margin-top: 6px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* TABLE WRAPPER (GLASS) */
+.pds-table-wrapper {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-radius: 26px;
+  padding: 24px;
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(255,255,255,0.35);
+}
+
+/* TABLE */
+.pds-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pds-table th,
+.pds-table td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.pds-table th {
+  font-weight: 700;
+  color: #1e7f43;
+  background: rgba(244,251,247,0.6);
+}
+
+.pds-table tr:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.pds-table tr:hover {
+  background: rgba(249,253,251,0.6);
+}
+
+/* STATUS */
+.status {
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status.available {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* BOOK BUTTON */
+.book-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #1e7f43, #145c30);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(30,127,67,0.45);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pds-content {
+    padding: 50px 20px;
+  }
+
+  .pds-bg {
+    inset: 20px;
+  }
+}
+
+/* --- NEW DEALER & VILLAGER STYLES --- */
+
+/* Villager Topbar has different background or adjustments if needed */
+.villager-topbar {
+  background: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid #1e7f43;
+  color: #1e7f43;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #1e7f43;
+  color: #fff;
+}
+
+/* Edit Inputs */
+.edit-input, .edit-select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 90%;
+  max-width: 120px;
+}
+
+.edit-select {
+  width: auto;
+}
+
+/* Action Buttons */
+.edit-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 12px;
+  background: #f0f4f8;
+  color: #334155;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover {
+  background: #e2e8f0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.save-btn {
+  padding: 6px 12px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-edit-btn {
+  padding: 6px 12px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Status Colors */
+.status.unavailable {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status.booked {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status.cancelled {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Dealer Bookings Section */
+.dealer-bookings-section {
+  margin-top: 50px;
+}
+
+.dealer-bookings-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #94a3b8;
+  box-shadow: none;
+}
+button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+.status.collected {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* OTP Verification UI */
+.otp-verify-box {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.otp-input-tiny {
+  width: 80px;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.verify-small-btn {
+  padding: 6px 12px;
+  background: #1e7f43;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.verify-small-btn:hover {
+  background: #145c30;
+}
+
+.action-done {
+  color: #94a3b8;
+  font-size: 12px;
+  font-style: italic;
+}
+/* Villager My Bookings sections */
+.user-bookings-container {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.pds-sec-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.pds-sec-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background: #1e7f43;
+  border-radius: 2px;
+}
+
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.user-booking-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  border-left: 4px solid #cbd5e1;
+}
+
+.user-booking-card.upcoming {
+  border-left-color: #f59e0b;
+}
+
+.user-booking-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.item-name {
+  font-weight: 800;
+  color: #1e7f43;
+  font-size: 18px;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-badge.booked { background: #fff3cd; color: #856404; }
+.status-badge.collected { background: #d4edda; color: #155724; }
+.status-badge.cancelled { background: #f8d7da; color: #721c24; }
+
+.card-body p {
+  margin: 5px 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.view-details-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #f1f5f9;
+  color: #334155;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-details-btn:hover {
+  background: #1e7f43;
+  color: white;
+}
+
+/* History List Layout */
+.history-list {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.history-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr;
+  padding: 15px 25px;
+  background: #f8fafc;
+  font-weight: 700;
+  color: #475569;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.history-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr;
+  padding: 15px 25px;
+  align-items: center;
+  border-bottom: 1px solid #f8fafc;
+  transition: background 0.2s;
+}
+
+.history-row:last-child {
+  border-bottom: none;
+}
+
+.history-row:hover {
+  background: #fdfdfd;
+}
+
+.h-item { font-weight: 600; color: #1e293b; }
+.h-qty { color: #64748b; }
+.h-date { color: #64748b; font-size: 14px; }
+
+.h-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.h-status.collected { background: #dcfce7; color: #166534; }
+.h-status.cancelled { background: #fee2e2; color: #991b1b; }
+.h-status.booked { background: #fef3c7; color: #92400e; }

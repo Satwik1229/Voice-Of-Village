@@ -1,0 +1,170 @@
+:root {
+  --green: #1e7f43;
+  --text-dark: #2b2b2b;
+  --text-muted: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* FULL PAGE – ONE CANVAS */
+.register-page {
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 120px;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.85),
+      rgba(255,255,255,0.85)
+    ),
+    url("../../assets/create-account-bg.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* HERO TEXT (PART OF BG) */
+.register-hero {
+  max-width: 520px;
+}
+
+.register-hero h1 {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 14px;
+}
+
+.register-hero p {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* CARD – INTEGRATED, NOT FLOATING */
+.register-card {
+  position: absolute;
+  top: 50%;
+  right: 170px;
+  transform: translateY(-50%);
+
+  width: 460px;
+  padding: 36px;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  /* subtle elevation only */
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* HEADER */
+.register-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.register-header img {
+  width: 56px;
+}
+
+.register-header h2 {
+  font-size: 18px;
+  color: var(--green);
+}
+
+.register-header span {
+  font-size: 13px;
+  color: #666;
+}
+
+/* FORM */
+form {
+  margin-top: 22px;
+}
+
+form label {
+  display: block;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+form input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+/* FILE INPUT */
+.file-input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px dashed var(--green) !important;
+  background: #f9f9f9;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.file-input:hover {
+  background: #f0f7f2;
+}
+
+.upload-hint {
+  font-size: 12px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* BUTTON */
+.register-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #1e7f43, #145c30);
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .register-page {
+    padding: 40px 20px;
+  }
+
+  .register-card {
+    position: static;
+    transform: none;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .register-hero h1 {
+    font-size: 34px;
+  }
+}

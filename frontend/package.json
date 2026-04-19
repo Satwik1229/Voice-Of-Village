@@ -1,0 +1,64 @@
+{
+  "name": "projectfrontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "electron.cjs",
+  "homepage": "./",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "electron": "electron .",
+    "electron-build": "vite build && electron-builder"
+  },
+  "dependencies": {
+    "axios": "^1.15.0",
+    "chart.js": "^4.5.1",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.2.0",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.12.0",
+    "recharts": "^3.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "electron": "^41.0.3",
+    "electron-builder": "^26.8.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "vite": "^6.4.1"
+  },
+  "build": {
+    "appId": "com.voiceofvillage.app",
+    "productName": "VoiceOfVillage",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron.cjs",
+      "public/logo.png",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "public/logo.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "public/logo.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "public/logo.png"
+    }
+  }
+}

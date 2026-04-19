@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* PAGE */
+.pds-slot-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* BACKGROUND */
+.pds-bg {
+  position: absolute;
+  inset: 40px;
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.35),
+      rgba(245,252,248,0.95)
+    ),
+    url("../../assets/pds-system-bg.png") center / contain no-repeat;
+  border-radius: 30px;
+  z-index: 0;
+}
+
+/* PDS TOPBAR */
+.pds-topbar {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 8% 0;
+}
+
+.pds-topbar h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e7f43;
+}
+
+.pds-nav {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #1e7f43;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #1e7f43;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.username {
+  font-weight: 600;
+  color: #333;
+}
+
+.account-menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  min-width: 140px;
+  z-index: 10;
+}
+
+.account-menu div {
+  padding: 12px 18px;
+  cursor: pointer;
+  color: #d9534f;
+  font-weight: 600;
+}
+
+.account-menu div:hover {
+  background: #fef0f0;
+}
+
+/* WRAPPER */
+.pds-wrapper {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 70px 8%;
+}
+
+/* LEFT – FORM */
+.booking-form {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px);
+  padding: 34px;
+  border-radius: 24px;
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(255,255,255,0.35);
+}
+
+.booking-form h1 {
+  color: #1e7f43;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.selected-item {
+  background: rgba(255,255,255,0.8);
+  padding: 12px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.booking-form label {
+  display: block;
+  font-weight: 600;
+  margin: 14px 0 6px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.9);
+}
+
+.booking-form button {
+  margin-top: 22px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(to right, #1e7f43, #145c30);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.success {
+  margin-top: 12px;
+  color: #1e7f43;
+  font-weight: 600;
+}
+
+/* RIGHT – BOOKINGS */
+.booking-history {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(18px);
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(255,255,255,0.35);
+  overflow-y: auto;
+  max-height: 520px;
+}
+
+.booking-history h2 {
+  font-weight: 800;
+  margin-bottom: 22px;
+  color: #1e7f43;
+}
+
+/* BOOKING CARD */
+.booking-card {
+  background: rgba(255, 255, 255, 0.00001);
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+}
+
+.booking-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.item {
+  font-weight: 700;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status.booked {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.collected {
+  background: #d4edda;
+  color: #155724;
+}
+
+.otp {
+  margin: 8px 0;
+  color: #145c30;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pds-wrapper {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+  }
+
+  .pds-bg {
+    inset: 20px;
+  }
+
+  .booking-history {
+    max-height: none;
+  }
+}
+/* CANCEL BUTTON */
+.cancel-btn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #dc3545, #b52a37);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cancel-btn:hover {
+  opacity: 0.9;
+}
+
+/* CANCELLED TEXT */
+.cancelled-msg {
+  margin-top: 10px;
+  color: #dc3545;
+  font-weight: 700;
+}
+
+.quantity-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.9);
+  margin-bottom: 5px;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: #1e7f43;
+}

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* PAGE */
+.donations-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.donations-bg {
+  position: absolute;
+
+  /* ⬇️ THIS CREATES SPACE ON ALL SIDES */
+  inset: 15px;                   /* top right bottom left */
+
+  border-radius: 28px;           /* smooth edges */
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.25),
+      rgba(245,252,248,0.9)
+    ),
+    url("../../assets/donations-bg.png") center / contain no-repeat;
+
+  z-index: 1;
+}
+
+/* CONTENT WRAPPER */
+.donations-content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;   /* ✅ LEFT ALIGN */
+
+  padding-left: 8%;              /* spacing from left */
+  padding-right: 40px;
+}
+
+
+/* DONATION CARD */
+.donation-card {
+  width: 420px;
+  padding: 36px;
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 22px 55px rgba(0,0,0,0.18),
+    0 8px 20px rgba(0,0,0,0.08);
+
+  animation: fadeUp 0.5s ease;
+  @media (min-width: 1200px) {
+  .donation-card {
+    margin-left: 40px;
+  }
+}
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADER */
+.donation-card h1 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #1e7f43;
+}
+
+.subtitle {
+  margin-top: 8px;
+  margin-bottom: 26px;
+  color: #555;
+}
+
+/* FORM */
+.donation-form .form-group {
+  margin-bottom: 16px;
+}
+
+.donation-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.donation-form input,
+.donation-form select,
+.donation-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  background: rgba(255,255,255,0.95);
+}
+
+.donation-form input:focus,
+.donation-form select:focus,
+.donation-form textarea:focus {
+  border-color: #1e7f43;
+  box-shadow: 0 0 0 2px rgba(30,127,67,0.15);
+}
+
+/* DONATE BUTTON */
+.donate-btn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(to right, #1e7f43, #145c30);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(30,127,67,0.45);
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .donation-card {
+    width: 100%;
+    padding: 28px;
+  }
+}

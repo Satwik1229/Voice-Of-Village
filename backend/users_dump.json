@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Village Admin",
+    "email": "admin@village.com",
+    "role": "admin",
+    "password": "$2b$10$Tlx4sBTDNkHATDUedu.56OqR0GdlWZoO.h.lFtuIpvd8rX5Clfqk."
+  },
+  {
+    "name": "PDS Dealer",
+    "email": "pds@village.com",
+    "role": "pds_dealer",
+    "password": "$2b$10$tfv1fe4LK.01I0tRZpsiiOPwc.iH1p85dZH6rqwEiZZdBVLo9dj06"
+  },
+  {
+    "name": "PDS Dealer",
+    "email": "pds@village.com",
+    "role": "pds_dealer",
+    "password": "$2b$10$UqSLPB3V0nH5LJBzQ2kmq.OO8/vpDOfXCZHXYuay/FT8zhv/euDAi"
+  },
+  {
+    "name": "Vonteru Satwik Reddy",
+    "email": "vonterusatwik@gmail.com",
+    "role": "user",
+    "password": "$2b$10$AtlXDokOgJG44MZJ.uu9a.ALuBrp0bbBWzB7FyY9aIcEeulwEnozm"
+  },
+  {
+    "name": "satwik reddy",
+    "email": "satwikreddy1229@gmail.com",
+    "role": "user",
+    "password": "$2b$10$1iPimTXmQMDWdfFhRGr..ePMs1VxEsNPIdL37TwAv2auIsVUIpeBC"
+  }
+]

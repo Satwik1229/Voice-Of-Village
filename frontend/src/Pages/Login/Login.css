@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Wrapper with background */
+.login-wrapper {
+  min-height: 100vh;
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.85),
+      rgba(255,255,255,0.85)
+    ),
+    url("../../assets/village-bg.png");
+  background-size: cover;
+  background-position: center left;
+  padding: 80px;
+}
+
+/* Text on background */
+.login-content {
+  max-width: 520px;
+}
+
+.login-content h1 {
+  font-size: 46px;
+  color: #1e7f43;
+  margin-bottom: 20px;
+}
+
+.login-content p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* Floating card */
+.login-card {
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translateY(-50%);
+  width: 420px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.login-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.login-header img {
+  width: 60px;
+}
+
+.login-header h2 {
+  color: #1e7f43;
+  font-size: 18px;
+  margin: 0;
+}
+
+.login-header span {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Login tab */
+.login-tab {
+  margin: 22px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.login-tab span {
+  padding-bottom: 6px;
+  border-bottom: 3px solid #1e7f43;
+  font-weight: 600;
+  color: #1e7f43;
+}
+
+/* Form */
+form label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+.login-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #1e7f43, #145c30);
+  color: white;
+  font-size: 16px;
+}
+
+.forgot {
+  text-align: center;
+  margin: 14px 0;
+  font-size: 14px;
+}
+
+.signup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup button {
+  background: #ff8c1a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
