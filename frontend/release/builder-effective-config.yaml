@@ -1,0 +1,21 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.voiceofvillage.app
+productName: VoiceOfVillage
+files:
+  - filter:
+      - dist/**/*
+      - electron.cjs
+      - public/logo.png
+      - package.json
+win:
+  target: portable
+  icon: public/logo.png
+mac:
+  target: dmg
+  icon: public/logo.png
+linux:
+  target: AppImage
+  icon: public/logo.png
+electronVersion: 41.0.3
