@@ -6,7 +6,8 @@ const db = require('../config/db');
 const getUserCardInfo = async (req, res) => {
   const userId = req.user.id;
   try {
-    const [[user]] = await db.query('SELECT card_type, family_members FROM users WHERE id = ?', [userId]);
+    const [rows] = await db.query('SELECT card_type, family_members FROM users WHERE id = ?', [userId]);
+    const user = rows[0];
     res.json(user || { card_type: null, family_members: 1 });
   } catch (err) {
     res.status(500).json({ message: 'Server error', error: err.message });
@@ -60,7 +61,8 @@ const getItems = async (req, res) => {
 
     // If user is logged in and has a card type, attach their quota info
     if (req.user) {
-      const [[user]] = await db.query('SELECT card_type, family_members FROM users WHERE id = ?', [req.user.id]);
+      const [userRows] = await db.query('SELECT card_type, family_members FROM users WHERE id = ?', [req.user.id]);
+      const user = userRows[0];
       if (user && user.card_type) {
         const currentMonth = new Date();
         currentMonth.setDate(1);
@@ -132,7 +134,8 @@ const createBooking = async (req, res) => {
     }
 
     // 3. MONTHLY QUOTA CHECK — strict block
-    const [[userRow]] = await db.query('SELECT card_type, family_members FROM users WHERE id = ?', [userId]);
+    const [userRows] = await db.query('SELECT card_type, family_members FROM users WHERE id = ?', [userId]);
+    const userRow = userRows[0];
     if (userRow && userRow.card_type && userRow.card_type !== 'APL') {
       const monthlyQuota = calculateMonthlyQuota(pdsItem, userRow.card_type, userRow.family_members || 1);
       const usedThisMonth = await getMonthlyUsage(userId, item);

@@ -30,11 +30,13 @@ const donationRoutes = require('./routes/donationRoutes');
 const reportRoutes = require('./routes/reportRoutes');
 const fundRoutes = require('./routes/fundRoutes');
 const announcementRoutes = require('./routes/announcementRoutes');
+const dashboardRoutes = require('./routes/dashboardRoutes');
 
 app.use('/api/donations', donationRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api/funds', fundRoutes);
 app.use('/api/announcements', announcementRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 // Serve static images from uploads directory
 app.use('/uploads', express.static('uploads'));

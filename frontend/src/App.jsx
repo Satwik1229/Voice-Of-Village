@@ -17,6 +17,8 @@ import ElectricityRequest from "./Pages/ElectricityRequest/ElectricityRequest";
 import HouseRequest from "./Pages/HouseRequest/HouseRequest";
 import Reports from "./Pages/Reports/Reports";
 import FundTransparency from "./Pages/FundTransparency/FundTransparency";
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
@@ -31,6 +33,8 @@ export default function App() {
 
       {/* User Protected Routes */}
       <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+      <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
+      <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
       <Route path="/issues" element={<ProtectedRoute><Issues /></ProtectedRoute>} />
       <Route path="/report-issue" element={<ProtectedRoute><ReportIssue /></ProtectedRoute>} />
       <Route path="/announcements" element={<ProtectedRoute><Announcements /></ProtectedRoute>} />
